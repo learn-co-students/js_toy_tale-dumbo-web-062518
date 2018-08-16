@@ -43,6 +43,7 @@ async function updateToy(id, likes) {
 
 function renderToys() {
   const toyCollection = document.getElementById("toy-collection")
+  toyCollection.innerHTML = ""
   const toyList = fetchAllToys()
   toyList.then(toys => {
     toys.forEach(toy => {
@@ -89,7 +90,8 @@ addBtn.addEventListener('click', () => {
       const toyImg = document.getElementById("toyImg")
       const toyObj = {
         name: toyName.value,
-        image: toyImg.value
+        image: toyImg.value,
+        likes: 0
       }
       createToy(toyObj)
     })
