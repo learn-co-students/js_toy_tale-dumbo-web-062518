@@ -56,6 +56,11 @@ button:hover {
   color: #e04b52;
 }
 
+button:disabled {
+  background-color: whitesmoke;
+  color: #e04b52;
+}
+
 .container {
   padding: 1rem;
   width: stretch;
